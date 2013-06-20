@@ -84,3 +84,19 @@ Pick a plugin version that corresponds to your minor (y) brunch version.
 
 If you want to use git version of plugin, add
 `"jsenv-brunch": "git+https://github.com/rcs/jsenv-brunch.git"`.
+
+## Options
+
+To specify uglifyjs options, use config.plugins.uglify object, for example:
+
+```
+config =
+  plugins:
+    jsenv:
+      # send extra data to the file to be parsed
+      data:
+        env: 'debug'
+      # set the context of the require to easier modules includes
+      # by default it is the app root
+      rootOfContext: 'app'
+```
